@@ -1,0 +1,92 @@
+body {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 1em;
+}
+
+h1 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-top: 2em;
+}
+
+h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.125rem;
+}
+
+img {
+    max-width: 100%;
+    border: 1px solid grey;
+}
+
+nav {
+    font-size: 0.93rem;
+    background-color: hsl(280, 16.7%, 97.6%);
+    border: 1px solid hsl(280, 8.8%, 66.5%);
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+nav h2 {
+    font-size: 1em;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+nav ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+nav a {
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* zoom-img: on load, images.js will wrap shrunk images in an <a> with this
+ * class, linking to the image source.  Here we add a little zoom tab to
+ * show that you can click to zoom.
+ */
+
+a.zoom-img {
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* This removes the space below the image, allowing the a.zoom-img::after thing
+ * to appear connected to the image. */
+a.zoom-img img {
+    display: block;
+}
+
+a.zoom-img::after {
+    /* U+FE0E is the text presentation selector (see UTS#51: Unicode Emoji) */
+    content: "🔎\FE0E";
+    color: black;
+    border-width: 0.3em;
+    border-radius: 1em;
+    border-style: solid;
+    background-color: hsl(280, 15%, 90%);
+    border-color: hsl(280, 15%, 90%);
+    float: right;
+    margin-left: 0.5em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
